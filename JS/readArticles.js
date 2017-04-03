@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 
 function getArticles() {
-    $.GET("../php/read.php", function (data) {
+    $.get("../php/read.php", function (data) {
         console.log(data)
-    })
+    });
 }
