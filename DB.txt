@@ -1,0 +1,11 @@
+ip til DB: 139.59.213.205
+
+ADMIN:
+
+brugernavn: BIM-lab-admin
+pass: admin
+
+CLIENT:
+
+brugernavn: BIM-lab-client
+pass: password

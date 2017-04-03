@@ -1,0 +1,33 @@
+#container{
+    text-align: center;
+}
+
+#para{
+    height: 310px;
+    width: 310px;
+}
+
+header {
+    width: 100%;
+    height: 12vh;
+    box-sizing: border-box;
+    border: solid 2px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+article {
+    width: 80%;
+    height: 86vh;
+    box-sizing: border-box;
+    border: solid 2px;
+    float: left;
+}
+
+aside {
+    width: 20%;
+    height: 86vh;
+    box-sizing: border-box;
+    border: solid 2px;
+    float: left;
+}
