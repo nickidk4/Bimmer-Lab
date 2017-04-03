@@ -6,10 +6,10 @@
  * Time: 10:42
  */
 
-$address = 'localhost';
-$user = 'root';
-$pass = 'root';
-$dbName = 'Insert name here';
+$address = '139.59.213.205';
+$user = 'BIM-lab-admin';
+$pass = 'admin';
+$dbName = 'bim-lab';
 
 $con = mysqli_connect($address,$user,$pass);
 
