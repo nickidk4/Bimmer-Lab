@@ -7,6 +7,7 @@
  */
 
 include("dbConnection.php");
+session_start();
 
 $title = $_POST[''];
 $imageURL = $_POST[''];

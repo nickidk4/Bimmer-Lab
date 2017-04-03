@@ -9,6 +9,7 @@
 
 
 include("dbConnection.php");
+session_start();
 
 $id = $_POST['id'];
 
@@ -25,10 +26,3 @@ $stmt->close();
 $conn->close();
 
 header('Location: admin.html');
-=======
- * Created by PhpStorm.
- * User: ThorNissen
- * Date: 03/04/2017
- * Time: 11.24
- */
->>>>>>> origin/master
