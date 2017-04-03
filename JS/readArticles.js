@@ -3,13 +3,13 @@
  */
 
 $(document).ready(function () {
-    getArticles()
+    getArticles();
 });
 
 
 
 function getArticles() {
-    $.get("../php/read.php", function (data) {
-        console.log(data)
+    $.get("php/read.php", function (data) {
+        console.log(data);
     });
 }
