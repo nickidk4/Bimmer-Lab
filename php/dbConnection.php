@@ -11,7 +11,7 @@ $user = 'BIM-lab-admin';
 $pass = 'admin';
 $dbName = 'bim-lab';
 
-$conn = mysqli_connect($address, $user, $pass);
+$conn = mysqli_connect($address,$user,$pass,$dbName);
 
 if(!$conn){
     echo 'Not connected to server ';
