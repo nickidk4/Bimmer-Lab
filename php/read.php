@@ -9,8 +9,10 @@
 include ("dbConnection.php");
 session_start();
 
-$sql = "SELECT headline, img, content FROM artikler";
+$sql = "SELECT id,headline, img, content FROM artikler WHERE isDeleted = 0";
 
 if(!mysqli_query($con,$sql)){
     echo 'Could not read';
 }
+
+echo $sql;
