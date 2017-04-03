@@ -6,19 +6,21 @@
  * Time: 10:42
  */
 
-$address = '139.59.213.205';
-$user = 'BIM-lab-admin';
-$pass = 'admin';
-$dbName = 'bim-lab';
+$address = 'localhost';
+$user = 'root';
+$pass = 'root';
+$dbName = 'bimDB';
 
-$conn = mysqli_connect($address,$user,$pass,$dbName);
+$conn = mysqli_connect($address,$user,$pass);
 
 if(!$conn){
     echo 'Not connected to server ';
     die;
 }
 
+
 if(!mysqli_select_db($conn,$dbName)){
     echo 'Database not selected';
     die;
 }
+

@@ -9,12 +9,9 @@ $(document).ready(function () {
 
 
 function getArticles() {
-<<<<<<< Updated upstream
     $.get("php/read.php", function (data) {
         console.log(data);
-=======
     $.get("../php/read.php", function (data) {
         console.log(data)
->>>>>>> Stashed changes
     });
 }

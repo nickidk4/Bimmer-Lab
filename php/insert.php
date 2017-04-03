@@ -9,20 +9,18 @@
 include("dbConnection.php");
 session_start();
 
-$title = $_POST[''];
-$imageURL = $_POST[''];
-$paragraph = $_POST[''];
+$title = $_POST['title'];
+$imageURL = $_POST['imgURL'];
+$paragraph = $_POST['para'];
 
-$stmt = $conn->prepare("INSERT INTO nameofDB (title, imageURL, paragraph) VALUES (?,?,?)");
+$stmt = $conn->prepare("INSERT INTO Article (Title, ImgURL, Paragraph) VALUES (?,?,?)");
 $stmt->bind_param("sss", $title, $imageURL, $paragraph);
 
 if ($stmt->execute() === TRUE) {
-    echo "Succesfully inserted to database";
+    header('Location: ../admin.html');
 } else {
     echo "Error: " . $conn->error;
 }
 
 $stmt->close();
 $conn->close();
-
-header('Location: admin.html');
