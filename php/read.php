@@ -9,10 +9,16 @@
 include ("dbConnection.php");
 session_start();
 
-$sql = "SELECT id,headline, img, content FROM artikler WHERE isDeleted = 0";
+$sql = "SELECT * FROM articles";
 
-if(!mysqli_query($con,$sql)){
-    echo 'Could not read';
+$result = $conn->query($sql);
+$rows = array();
+
+while($row = mysqli_fetch_assoc($result)){
+    $data[] = $row;
 }
 
-echo $sql;
+echo json_encode($data);
+
+
+$conn->close();

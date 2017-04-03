@@ -13,7 +13,7 @@ $title = $_POST['title'];
 $imageURL = $_POST['imgURL'];
 $paragraph = $_POST['para'];
 
-$stmt = $conn->prepare("INSERT INTO Article (Title, ImgURL, Paragraph) VALUES (?,?,?)");
+$stmt = $conn->prepare("INSERT INTO articles (title, image, content) VALUES (?,?,?)");
 $stmt->bind_param("sss", $title, $imageURL, $paragraph);
 
 if ($stmt->execute() === TRUE) {

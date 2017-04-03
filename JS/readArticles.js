@@ -9,9 +9,20 @@ $(document).ready(function () {
 
 
 function getArticles() {
-    $.get("php/read.php", function (data) {
-        console.log(data);
-    $.get("../php/read.php", function (data) {
-        console.log(data)
+    $.get("php/read.php", function (data){
+        result = JSON.parse(data);
+        console.log
+        $("#articles").clear;
+        for(i = 0; i < result.length; i++){
+            article = result[i];
+            $("#articles").append(
+                '<tr>' +
+                '<td>' + article.id + '</td>' +
+                '<td>' + article.title + '</td>' +
+                '<td>' + article.image + '</td>' +
+                '<td>' + article.content + '</td>' +
+                '</tr>'
+            )
+        }
     });
 }
