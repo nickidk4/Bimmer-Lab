@@ -11,12 +11,14 @@ $user = 'root';
 $pass = 'root';
 $dbName = 'Insert name here';
 
-$con = mysqli_connect($address,$user,$pass);
+$conn = mysqli_connect($address, $user, $pass);
 
-if(!$con){
+if(!$conn){
     echo 'Not connected to server ';
+    die;
 }
 
-if(!mysqli_select_db($con,$dbName)){
+if(!mysqli_select_db($conn,$dbName)){
     echo 'Database not selected';
+    die;
 }
