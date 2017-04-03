@@ -21,11 +21,11 @@ if(!mysqli_select_db($con,$dbName)){
     echo 'Database not selected';
 }
 
-$titel = $_POST[''];
+$title = $_POST[''];
 $imageURL = $_POST[''];
 $paragraph = $_POST[''];
 
-$sql = "INSERT INTO nameOfDB (titel,imageURL,paragraph) VALUES ('$titel','$imageURL','$paragraph')";
+$sql = "INSERT INTO nameOfDB (titel,imageURL,paragraph) VALUES ('$title','$imageURL','$paragraph')";
 
 if(!mysqli_query($con,$sql)){
     echo 'Not inserted';
