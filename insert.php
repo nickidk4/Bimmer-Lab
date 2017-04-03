@@ -25,10 +25,10 @@ $title = $_POST[''];
 $imageURL = $_POST[''];
 $paragraph = $_POST[''];
 
-$sql = "INSERT INTO nameOfDB (titel,imageURL,paragraph) VALUES ('$title','$imageURL','$paragraph')";
+$sql = "INSERT INTO nameOfDB (title,imageURL,paragraph) VALUES ('$title','$imageURL','$paragraph')";
 
 if(!mysqli_query($con,$sql)){
     echo 'Not inserted';
 }
 
-header('Location: index.html');
+header('Location: admin.html');
