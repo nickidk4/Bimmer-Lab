@@ -21,6 +21,8 @@ function getArticles() {
                 '<td>' + article.title + '</td>' +
                 '<td>' + article.image + '</td>' +
                 '<td>' + article.content + '</td>' +
+                '<td><button class="btn btn-success">Update</button></td>' +
+                '<td><button class="btn btn-danger">Delete</button></td>' +
                 '</tr>'
             )
         }
