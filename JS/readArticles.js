@@ -6,8 +6,6 @@ $(document).ready(function () {
     getArticles();
 });
 
-
-
 function getArticles() {
     $.get("php/read.php", function (data){
         result = JSON.parse(data);
