@@ -18,3 +18,13 @@ function getPrimaryArticle() {
         document.getElementById("imgId").src=tallerken;
     });
 }
+
+function checkLength(){
+    var textbox = document.getElementById("para");
+    if(textbox.value.length <= 3500){
+        alert("success");
+    }
+    else{
+        alert("Make sure the input is no longer than 3500 characters.")
+    }
+}
