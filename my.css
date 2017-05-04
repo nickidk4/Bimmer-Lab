@@ -28,20 +28,29 @@ header {
     font-size: xx-large;
 }
 
-article {
-    width: 80%;
+#articleWrapper {
+    width: 65%;
     height: 86vh;
     box-sizing: border-box;
     border: solid 2px;
     float: left;
 }
 
-aside {
-    width: 20%;
+aSide {
+    width: 35%;
     height: 86vh;
     box-sizing: border-box;
     border: solid 2px;
     float: left;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+aTitle {
+    text-align: center;
 }
 
 h2{

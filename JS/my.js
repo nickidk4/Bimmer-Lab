@@ -2,8 +2,22 @@
  * Created by Nicki on 04-05-2017.
  */
 
-function togglePrimary(id) { //id bliver sendt videre fra knappen på artiklen
-    // id skal sendes til primary.php
+$(document).ready(function () {
+    getPrimaryArticle();
+});
 
+function getPrimaryArticle() {
+    $.get("php/homepage.php", function (data){
+        result = JSON.parse(data);
+        $("#titleWrapper").clear;
+        $("#article").clear;
+        $("#imageWrapper").clear;
+
+        for(i = 0; i < result.length; i++){
+            article = result[i];
+            $("#titleWrapper").set(article.title);
+            $("#article").set(article.content);
+            $("#imageWrapper").set(article.image);
+        }
+    });
 }
-
