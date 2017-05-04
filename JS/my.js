@@ -10,10 +10,14 @@ function getPrimaryArticle() {
     $.get("php/readPrimary.php", function (data){
         var result = JSON.parse(data);
 
+        $("#titleWrapper").empty();
+        $("#content").empty();
+        $("#imageWrapper").empty();
+
         var article = result[0];
-        $("#titleWrapper").set(article.title);
-        $("#content").set(article.content);
-        $("#imageWrapper").set(article.image);
+        $("#titleWrapper").append(article.title);
+        $("#content").append(article.content);
+        $("#imageWrapper").append(article.image);
 
     });
     console.log(article);
