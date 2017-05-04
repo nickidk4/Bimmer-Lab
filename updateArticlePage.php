@@ -38,15 +38,15 @@ if(isset($_GET['id'])){
         </div>
         <br>
         <div>
-            <input id="image" type="text" name="image" value="'.$image.'">
+            <input id="imgURL" type="text" name="image" value="'.$image.'">
         </div>
         <br>
         <div>
-            <textarea id="content" type="text" name="content">'.$content.'</textarea>
+            <textarea id="para" type="text" name="content">'.$content.'</textarea>
         </div>
         <div>
             <input id="" type="hidden" name="id" value="'.$id.'">
-            <input type="submit" value="Opdater">
+            <input type="submit" value="Update">
         </div>
     </form>
 </div>

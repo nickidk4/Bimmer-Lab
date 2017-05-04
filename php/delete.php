@@ -15,9 +15,7 @@ $sql = "UPDATE articles SET isDeleted=1 WHERE id=?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id);
 
-if ($stmt->execute() === TRUE) {
-    echo "Succesfully added to deleted section";
-} else {
+if ($stmt->execute() === FALSE) {
     echo "Error: " . $conn->error;
 }
 
