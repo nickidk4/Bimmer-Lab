@@ -25,7 +25,7 @@ if ($stmt->execute() === TRUE) {
 
 
 // Change selected article to primary
-$stmt = $conn->prepare("UPDATE articles SET isPrimary=1 WHERE id = " + $id);
+$stmt = $conn->prepare("UPDATE articles SET isPrimary=1 WHERE id = " + $id); // Skal sætte article's isPrimary til 1 på den gældende id
 $stmt->bind_param("i", $id);
 
 if ($stmt->execute() === TRUE) {
