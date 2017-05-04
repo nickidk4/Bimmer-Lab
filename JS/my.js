@@ -21,10 +21,12 @@ function getPrimaryArticle() {
 
 function checkLength(){
     var textbox = document.getElementById("para");
-    if(textbox.value.length <= 3500){
-        alert("success");
-    }
-    else{
+    if(textbox.value.length > 3500){
         alert("Make sure the input is no longer than 3500 characters.")
     }
+}
+
+function redirect() {
+    window.location.href = '../admin.html';
+    console.log("hejmeddigdaasd");
 }
