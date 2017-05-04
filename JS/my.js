@@ -6,3 +6,4 @@ function togglePrimary(id) { //id bliver sendt videre fra knappen på artiklen
     // id skal sendes til primary.php
 
 }
+

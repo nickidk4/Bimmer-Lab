@@ -28,7 +28,7 @@ header {
     font-size: xx-large;
 }
 
-.article {
+article {
     width: 80%;
     height: 86vh;
     box-sizing: border-box;
@@ -42,4 +42,8 @@ aside {
     box-sizing: border-box;
     border: solid 2px;
     float: left;
+}
+
+h2{
+    margin-top: 2vh;
 }
