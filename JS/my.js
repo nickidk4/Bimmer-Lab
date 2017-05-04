@@ -26,7 +26,7 @@ function checkLength(){
     }
 }
 
-function redirect() {
-    window.location.href = '../admin.html';
-    console.log("hejmeddigdaasd");
-}
+//function redirect() {
+//    window.location.href = '../admin.html';
+//    console.log("hejmeddigdaasd");
+//}
