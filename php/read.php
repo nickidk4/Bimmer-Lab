@@ -9,7 +9,7 @@
 include ("dbConnection.php");
 session_start();
 
-$sql = "SELECT * FROM articles";
+$sql = "SELECT * FROM articles WHERE isDeleted = 0";
 
 $result = $conn->query($sql);
 $rows = array();

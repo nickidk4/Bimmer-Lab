@@ -21,7 +21,11 @@ function getArticles() {
                 '<td>' + article.title + '</td>' +
                 '<td>' + article.image + '</td>' +
                 '<td>' + article.content + '</td>' +
-                '<td><button class="btn btn-success">Update</button></td>' +
+                '<td>' +
+                '   <a href="updateArticlePage.php?id=' + article.id+ '&title='+ article.title+'&content='+article.content+'&image='+article.image+'">' +
+                '       <button class="btn btn-success">Update</button>' +
+                    '</a>' +
+                '</td>' +
                 '<td><button class="btn btn-danger">Delete</button></td>' +
                 '<td><button class="btn btn-primary">Primary</button></td>' +
                 '</tr>'

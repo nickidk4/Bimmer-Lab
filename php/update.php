@@ -1,20 +1,17 @@
 <?php
-/**
-<<<<<<< HEAD
- * Created by IntelliJ IDEA.
- * User: Mathias
- * Date: 03-04-2017
- * Time: 10:51
- */
-
 
 include("dbConnection.php");
 session_start();
 
 $id = $_POST['id'];
+$title = $_POST['title'];
+$content = $_POST['content'];
+$image = $_POST['image'];
 
-$stmt = $conn->prepare("UPDATE dbName SET ?=?");
-$stmt->bind_param("i", $id);
+
+
+$stmt = $conn->prepare("UPDATE articles SET title = ?, content = ?, image = ? WHERE id = ?");
+$stmt->bind_param("sssi", $title, $content, $image,$id);
 
 if ($stmt->execute() === TRUE) {
     echo "Succesfully updated from database";
@@ -25,4 +22,4 @@ if ($stmt->execute() === TRUE) {
 $stmt->close();
 $conn->close();
 
-header('Location: admin.html');
+header('Location: ../admin.html');
