@@ -7,6 +7,12 @@ $(document).ready(function () {
 });
 
 
+function deleteArticles(id) {
+
+    $.post("php/delete.php", {id: id}).done(function(data) {
+        alert("deleted article with id: " + id);
+    });
+}
 
 function getArticles() {
     $.get("php/read.php", function (data){
@@ -21,13 +27,13 @@ function getArticles() {
                 '<td>' + article.title + '</td>' +
                 '<td>' + article.image + '</td>' +
                 '<td>' + article.content + '</td>' +
+
                 '<td>' +
                 '   <a href="updateArticlePage.php?id=' + article.id+ '&title='+ article.title+'&content='+article.content+'&image='+article.image+'">' +
                 '       <button class="btn btn-success">Update</button>' +
-                    '</a>' +
-                '</td>' +
-                '<td><button class="btn btn-danger">Delete</button></td>' +
-                '<td><button class="btn btn-primary">Primary</button></td>' +
+                    '</a></td>' +
+                '<td><a href="php/primary.php?id='+article.id+'"><button class="btn btn-primary">Primary</button></a></td>' +
+                '<td><button class="btn btn-danger" onclick="deleteArticles(' + article.id + ')">Delete</button></td>' +
                 '</tr>'
             )
         }
