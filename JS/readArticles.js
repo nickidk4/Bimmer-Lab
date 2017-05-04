@@ -8,10 +8,11 @@ $(document).ready(function () {
 
 
 function deleteArticles(id) {
-
-    $.post("php/delete.php", {id: id}).done(function(data) {
-        alert("deleted article with id: " + id);
-    });
+    if(confirm("Are you sure you want to delete Article?")) {
+        $.post("php/delete.php", {id: id}).done(function(data) {
+            alert("deleted article with id: " + id);
+        });
+    }
 }
 
 function getArticles() {
