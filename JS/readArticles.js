@@ -13,6 +13,7 @@ function deleteArticles(id) {
             alert("deleted article with id: " + id);
         });
     }
+    location.reload();
 }
 
 function getArticles() {
