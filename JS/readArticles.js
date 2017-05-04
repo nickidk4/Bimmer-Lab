@@ -27,8 +27,6 @@ function getArticles() {
                 '<td>' + article.title + '</td>' +
                 '<td>' + article.image + '</td>' +
                 '<td>' + article.content + '</td>' +
-                '<td><button class="btn btn-success">Update</button></td>' +
-                '<td><button class="btn btn-danger">Delete</button></td>' +
                 '<td><a href="php/primary.php?id='+article.id+'"><button class="btn btn-primary">Primary</button></a></td>' +
                 '<td><button class="btn btn-danger" onclick="deleteArticles(' + article.id + ')">Delete</button></td>' +
                 '<td><button class="btn btn-primary" onclick="togglePrimary(article.id)">Primary</button></td>' +
