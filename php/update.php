@@ -1,12 +1,12 @@
 <?php
 
 include("dbConnection.php");
-session_start();
+include("upload.php");
 
 $id = $_POST['id'];
 $title = $_POST['title'];
 $content = $_POST['content'];
-$image = $_POST['image'];
+$image = 'img/'.$_FILES["fileToUpload"]["name"];
 
 
 

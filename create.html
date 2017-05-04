@@ -14,20 +14,21 @@
     </a>
     <br>
     <br>
-    <form action="php/insert.php" method="post">
+    <form action="php/insert.php" method="post" enctype="multipart/form-data">
         <div>
             <input id="title" type="text" name="title" placeholder="Title:">
         </div>
         <br>
         <div>
-            <input id="imgURL" type="text" name="imgURL" placeholder="Image URL:">
+            <p>Choose a picture</p>
+            <input type="file" name="fileToUpload" id="fileToUpload">
         </div>
         <br>
         <div>
             <textarea id="para" type="text" name="para" placeholder="Paragraph:"></textarea>
         </div>
         <div>
-            <input type="submit">
+            <input type="submit" value="Create article" name="submit">
         </div>
     </form>
 </div>

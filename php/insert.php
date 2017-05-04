@@ -7,10 +7,11 @@
  */
 
 include("dbConnection.php");
-session_start();
+
+include("upload.php");
 
 $title = $_POST['title'];
-$imageURL = $_POST['imgURL'];
+$imageURL = 'img/'.$_FILES["fileToUpload"]["name"];
 $paragraph = $_POST['para'];
 
 $stmt = $conn->prepare("INSERT INTO articles (title, image, content) VALUES (?,?,?)");

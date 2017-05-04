@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: rasmu
+ * User: rasmus
  * Date: 04-05-2017
  * Time: 09:56
  */
@@ -31,14 +31,16 @@ if(isset($_GET['id'])){
     </a>
     <br>
     <br>
-    <form action="php/update.php" method="post">
+    <form action="php/update.php" method="post" enctype="multipart/form-data">
 
         <div>
             <input id="title" type="text" name="title" value="'.$title.'">
         </div>
         <br>
         <div>
-            <input id="image" type="text" name="image" value="'.$image.'">
+            <div><img src="'.$image.'" style="width: 200px;height: auto;"></div>
+            <p>Choose a new picture</p>
+            <input type="file" name="fileToUpload" id="fileToUpload">
         </div>
         <br>
         <div>
@@ -46,7 +48,7 @@ if(isset($_GET['id'])){
         </div>
         <div>
             <input id="" type="hidden" name="id" value="'.$id.'">
-            <input type="submit" value="Opdater">
+            <input type="submit" value="Opdater" name="submit">
         </div>
     </form>
 </div>
