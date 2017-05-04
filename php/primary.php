@@ -15,7 +15,7 @@ $id = $_GET['id'];
 $stmt = $conn->prepare("UPDATE articles SET isPrimary = 0");
 
 if ($stmt->execute() === TRUE) {
-    echo "Succesfully updated from database";
+    console.log("Succesfully updated from database");
 } else {
     echo "Error: " . $conn->error;
 }
@@ -26,7 +26,7 @@ $stmt = $conn->prepare("UPDATE articles SET isPrimary=1 WHERE id = ?");
 $stmt->bind_param("i", $id);
 
 if ($stmt->execute() === TRUE) {
-    echo "Succesfully updated from database";
+    console.log("Succesfully updated from database");
 } else {
     echo "Error: " . $conn->error;
 }
