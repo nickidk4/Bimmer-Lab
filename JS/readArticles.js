@@ -32,8 +32,8 @@ function getArticles() {
                 '   <a href="updateArticlePage.php?id=' + article.id+ '&title='+ article.title+'&content='+article.content+'&image='+article.image+'">' +
                 '       <button class="btn btn-success">Update</button>' +
                     '</a></td>' +
-                '<td><a href="php/primary.php?id='+article.id+'"><button class="btn btn-primary">Primary</button></a></td>' +
                 '<td><button class="btn btn-danger" onclick="deleteArticles(' + article.id + ')">Delete</button></td>' +
+                '<td><a href="php/primary.php?id='+article.id+'"><button class="btn btn-primary">Primary</button></a></td>' +
                 '</tr>'
             )
         }
