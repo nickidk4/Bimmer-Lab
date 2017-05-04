@@ -13,8 +13,8 @@ function getPrimaryArticle() {
         var article = result[0];
         $("#titleWrapper").append(article.title);
         $("#content").append(article.content);
-        $("#imageWrapper").append(article.image);
 
+        var tallerken = article.image;
+        document.getElementById("imgId").src=tallerken;
     });
-    console.log(article);
 }
