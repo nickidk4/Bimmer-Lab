@@ -10,11 +10,10 @@
 include("dbConnection.php");
 session_start();
 
-$id = $_POST['id'];
+$id = $_GET['id'];
 
 // Change all articles to NOT primary
 $stmt = $conn->prepare("UPDATE articles SET isPrimary = 0");
-$stmt->bind_param("i", $id);
 
 if ($stmt->execute() === TRUE) {
     echo "Succesfully updated from database";
@@ -25,7 +24,7 @@ if ($stmt->execute() === TRUE) {
 
 
 // Change selected article to primary
-$stmt = $conn->prepare("UPDATE articles SET isPrimary=1 WHERE id = " + $id); // Skal sætte article's isPrimary til 1 på den gældende id
+$stmt = $conn->prepare("UPDATE articles SET isPrimary=1 WHERE id = ?"); // Skal sætte article's isPrimary til 1 på den gældende id
 $stmt->bind_param("i", $id);
 
 if ($stmt->execute() === TRUE) {
@@ -37,4 +36,4 @@ if ($stmt->execute() === TRUE) {
 $stmt->close();
 $conn->close();
 
-header('Location: admin.html');
+//header('Location: admin.html');

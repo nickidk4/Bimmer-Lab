@@ -21,7 +21,7 @@ function getArticles() {
                 '<td>' + article.content + '</td>' +
                 '<td><button class="btn btn-success">Update</button></td>' +
                 '<td><button class="btn btn-danger">Delete</button></td>' +
-                '<td><button class="btn btn-primary" onclick="togglePrimary(article.id)">Primary</button></td>' +
+                '<td><a href="php/primary.php?id='+article.id+'"><button class="btn btn-primary">Primary</button></a></td>' +
                 '</tr>'
             )
         }
