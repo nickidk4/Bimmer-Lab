@@ -7,17 +7,14 @@ $(document).ready(function () {
 });
 
 function getPrimaryArticle() {
-    $.get("php/homepage.php", function (data){
-        result = JSON.parse(data);
-        $("#titleWrapper").clear;
-        $("#article").clear;
-        $("#imageWrapper").clear;
+    $.get("php/readPrimary.php", function (data){
+        var result = JSON.parse(data);
 
-        for(i = 0; i < result.length; i++){
-            article = result[i];
-            $("#titleWrapper").set(article.title);
-            $("#article").set(article.content);
-            $("#imageWrapper").set(article.image);
-        }
+        var article = result[0];
+        $("#titleWrapper").append(article.title);
+        $("#content").append(article.content);
+        $("#imageWrapper").append(article.image);
+
     });
+    console.log(article);
 }

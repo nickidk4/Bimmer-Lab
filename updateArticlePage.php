@@ -44,11 +44,11 @@ if(isset($_GET['id'])){
         </div>
         <br>
         <div>
-            <textarea id="content" type="text" name="content">'.$content.'</textarea>
+            <textarea id="para" type="text" name="content">'.$content.'</textarea>
         </div>
         <div>
             <input id="" type="hidden" name="id" value="'.$id.'">
-            <input type="submit" value="Opdater" name="submit">
+            <input type="submit" value="Update" name="submit">
         </div>
     </form>
 </div>

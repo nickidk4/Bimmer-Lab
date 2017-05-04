@@ -13,9 +13,7 @@ $image = 'img/'.$_FILES["fileToUpload"]["name"];
 $stmt = $conn->prepare("UPDATE articles SET title = ?, content = ?, image = ? WHERE id = ?");
 $stmt->bind_param("sssi", $title, $content, $image,$id);
 
-if ($stmt->execute() === TRUE) {
-    echo "Succesfully updated from database";
-} else {
+if ($stmt->execute() === FALSE) {
     echo "Error: " . $conn->error;
 }
 

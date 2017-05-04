@@ -13,6 +13,7 @@ function deleteArticles(id) {
             alert("deleted article with id: " + id);
         });
     }
+    location.reload();
 }
 
 function getArticles() {
@@ -25,8 +26,6 @@ function getArticles() {
                 '<tr>' +
                 '<td>' + article.id + '</td>' +
                 '<td>' + article.title + '</td>' +
-                '<td>' + article.image + '</td>' +
-                '<td>' + article.content + '</td>' +
 
                 '<td>' +
                 '   <a href="updateArticlePage.php?id=' + article.id+ '&title='+ article.title+'&content='+article.content+'&image='+article.image+'">' +
@@ -49,8 +48,6 @@ function getArticles() {
                 '<tr>' +
                 '<td>' + article.id + '</td>' +
                 '<td>' + article.title + '</td>' +
-                '<td>' + article.image + '</td>' +
-                '<td>' + article.content + '</td>' +
 
                 '<td>' +
                 '   <a href="updateArticlePage.php?id=' + article.id+ '&title='+ article.title+'&content='+article.content+'&image='+article.image+'">' +
