@@ -29,8 +29,6 @@ function getArticles() {
                 '<td>' + article.content + '</td>' +
                 '<td><button class="btn btn-success">Update</button></td>' +
                 '<td><button class="btn btn-danger" onclick="deleteArticles(' + article.id + ')">Delete</button></td>' +
-                '<td><button class="btn btn-primary">Primary</button></td>' +
-                '<td><button class="btn btn-danger">Delete</button></td>' +
                 '<td><button class="btn btn-primary" onclick="togglePrimary(article.id)">Primary</button></td>' +
                 '</tr>'
             )
