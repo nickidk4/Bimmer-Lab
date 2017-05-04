@@ -6,7 +6,6 @@
  * Time: 09:19
  */
 
-
 include("dbConnection.php");
 session_start();
 
@@ -22,9 +21,8 @@ if ($stmt->execute() === TRUE) {
 }
 
 
-
 // Change selected article to primary
-$stmt = $conn->prepare("UPDATE articles SET isPrimary=1 WHERE id = ?"); // Skal sætte article's isPrimary til 1 på den gældende id
+$stmt = $conn->prepare("UPDATE articles SET isPrimary=1 WHERE id = ?");
 $stmt->bind_param("i", $id);
 
 if ($stmt->execute() === TRUE) {
@@ -36,4 +34,4 @@ if ($stmt->execute() === TRUE) {
 $stmt->close();
 $conn->close();
 
-//header('Location: admin.html');
+header('Location: ../admin.html');
