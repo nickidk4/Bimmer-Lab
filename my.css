@@ -28,7 +28,7 @@ header {
     font-size: xx-large;
 }
 
-article {
+.article {
     width: 80%;
     height: 86vh;
     box-sizing: border-box;
